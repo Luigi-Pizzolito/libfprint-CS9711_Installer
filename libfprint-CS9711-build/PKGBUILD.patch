@@ -1,0 +1,18 @@
+11c11
+< pkgname="$_pkgname-git"
+---
+> pkgname="$_pkgname-CS9711-git"
+14,15c14,15
+< pkgdesc="Library for fingerprint readers"
+< url="https://gitlab.freedesktop.org/libfprint/libfprint"
+---
+> pkgdesc="Library for fingerprint readers (forked to add chipsailing CS9711 support)"
+> url="https://github.com/ericlinagora/libfprint-CS9711"
+23a24
+>   systemd-libs opencv
+30a32
+>   systemd opencv doctest
+45c47
+< _pkgsrc="$_pkgname"
+---
+> _pkgsrc="$_pkgname-CS9711"
