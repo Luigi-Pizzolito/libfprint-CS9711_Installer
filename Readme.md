@@ -8,7 +8,7 @@ See https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/610
 Run `./install.sh`.
 Tested on Fedora 40 with GNOME.
 
-For Arch users, run `sudo ./install-arch.sh`.
+For Arch users, run `./install-arch.sh`.
 
 ## Manual Install Guide
 Install `rpm`, `fprintd`, `udevrule` and `printd-pam`.

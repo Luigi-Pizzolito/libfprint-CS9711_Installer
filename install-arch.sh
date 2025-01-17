@@ -1,17 +1,18 @@
 #!/bin/bash
 
 # Exit on any error
-set -e
+# set -e
 
 # Change to the directory where the script is located
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 cd "$SCRIPT_DIR"
 
 # create a temporary working directory
-# mkdir libfprint-CS9711-build && cd libfprint-CS9711-build
+# mkdir libfprint-CS9711-build
+cd libfprint-CS9711-build
 
 # uninstall current fprintd and libfprint (if installed)
-pacman -Rns fprintd
+sudo pacman -Rns fprintd
 
 # get original PKGBUILD
 # curl -O https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=libfprint-git
@@ -24,5 +25,5 @@ patch PKGBUILD PKGBUILD.patch
 makepkg -si  --needed --asdeps
 
 # reinstall fprintd
-pacman -S fprintd
+sudo pacman -S fprintd
 
